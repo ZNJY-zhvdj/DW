@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机核心基础 · 12个月学习计划表</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: #f2f5f9;
+            margin: 0;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .plan-container {
+            max-width: 1280px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            padding: 40px 35px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #0b1d2f;
+            letter-spacing: -0.02em;
+            border-left: 8px solid #3b82f6;
+            padding-left: 25px;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #4b587c;
+            margin-left: 33px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .download-area {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+        }
+        .download-btn {
+            background: #0b1d2f;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 18px rgba(0,50,100,0.15);
+            transition: all 0.2s;
+            border: 1px solid #1e2f47;
+        }
+        .download-btn:hover {
+            background: #1e2f47;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 24px rgba(0,70,150,0.25);
+        }
+        .download-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 650;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #0b1d2f;
+            border-bottom: 3px solid #e6edf5;
+            padding-bottom: 10px;
+        }
+        .section-title:first-of-type {
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+            margin: 20px 0 30px;
+            font-size: 0.98rem;
+        }
+        th {
+            background-color: #f8fbff;
+            color: #1e3a6b;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 16px 12px;
+            text-align: left;
+            border-bottom: 2px solid #cdddec;
+        }
+        td {
+            background-color: white;
+            padding: 14px 12px;
+            border-bottom: 1px solid #e9eef4;
+            vertical-align: top;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .highlight-badge {
+            background: #eaf3ff;
+            color: #1e4f8a;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+        .note-box {
+            background: #f4f9fe;
+            border-left: 6px solid #3b82f6;
+            padding: 20px 28px;
+            border-radius: 18px;
+            margin: 30px 0 20px;
+        }
+        ul, ol {
+            padding-left: 1.6rem;
+            line-height: 1.6;
+            color: #1f2c40;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .footer-meta {
+            margin-top: 45px;
+            display: flex;
+            justify-content: space-between;
+            color: #596f92;
+            border-top: 2px dashed #cbd5e2;
+            padding-top: 25px;
+            font-size: 0.95rem;
+        }
+        .progress-template {
+            background: #fafdff;
+            border-radius: 18px;
+            padding: 18px 22px;
+            border: 1px solid #dae6f2;
+            margin: 25px 0;
+        }
+        .badge {
+            background: #e6edf5;
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #2b3f60;
+        }
+        @media (max-width: 700px) {
+            .plan-container { padding: 25px 15px; }
+            h1 { font-size: 1.9rem; }
+            table { font-size: 0.85rem; }
+            td, th { padding: 10px 6px; }
+        }
+    </style>
+</head>
+<body>
+<div class="plan-container" id="planContainer">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div>
+            <h1>🧠 计算机核心基础 · 系统学习计划</h1>
+            <div class="subhead">C → 数据结构 → 计组 → OS → 网络 → 数据库 → Java/项目 · 12个月直达职场</div>
+        </div>
+        <div class="download-area">
+            <button class="download-btn" id="downloadWordBtn">
+                ⬇️ 下载 Word 文档 (.doc)
+            </button>
+        </div>
+    </div>
+
+    <!-- 计划内容区域 (用于下载) -->
+    <div id="planContent">
+        <!-- 总体路线总览 -->
+        <div class="section-title">📌 一、总体学习路线总览</div>
+        <table>
+            <thead><tr><th>阶段</th><th>时间</th><th>核心课程</th><th>学习方式</th><th>阶段产出</th></tr></thead>
+            <tbody>
+                <tr><td><span class="highlight-badge">第一阶段</span></td><td>第1-3个月</td><td>C语言 + 数据结构 (陈越)</td><td>同步学习，用C实现所有数据结构</td><td>C语言版数据结构代码库 + 学生成绩管理系统</td></tr>
+                <tr><td><span class="highlight-badge">第二阶段</span></td><td>第4-6个月</td><td>计算机组成原理(纪禄平) → 操作系统(李治军)</td><td>先硬件后软件，理解底层运行机制</td><td>内存模拟程序 + 多线程小实验</td></tr>
+                <tr><td><span class="highlight-badge">第三阶段</span></td><td>第7-9个月</td><td>计算机网络(李全龙) → 数据库系统(王珊)</td><td>理论与实践结合，网络编程+SQL练习</td><td>简易HTTP服务器 + 小型聊天室 + SQL练习集</td></tr>
+                <tr><td><span class="highlight-badge">第四阶段</span></td><td>第10-12个月</td><td>Java基础 + Spring Boot + 综合项目</td><td>衔接职场技术栈，开发全栈项目</td><td>在线笔记应用 (部署到云服务器)</td></tr>
+            </tbody>
+        </table>
+
+        <!-- 每日任务模板 (四个阶段) -->
+        <div class="section-title">📋 二、每日学习任务模板（可微调）</div>
+
+        <div style="margin-top: 25px;"><span class="badge">🔹 第一阶段：C语言 + 数据结构 (周一至周五)</span></div>
+        <table>
+            <thead><tr><th>时间</th><th>时长</th><th>内容</th><th>具体任务</th><th>工具/资源</th></tr></thead>
+            <tbody>
+                <tr><td>19:00-20:00</td><td>1h</td><td>C语言视频</td><td>国家智慧教育平台《C程序设计》1-2节，记笔记</td><td>课程视频</td></tr>
+                <tr><td>20:10-21:00</td><td>50min</td><td>数据结构视频</td><td>陈越《数据结构》对应章节，理解概念</td><td>慕课/教材</td></tr>
+                <tr><td>21:10-22:00</td><td>50min</td><td>编码实践</td><td>复现代码 + 用C实现数据结构 + LeetCode简单题1道</td><td>IDE/LeetCode</td></tr>
+                <tr><td colspan="5" style="background:#f6faff;"><strong>周末 (6h):</strong> 完成小项目(学生管理系统) + 复习+刷题3-5道</td></tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px;"><span class="badge">🔸 第二阶段：计组 → 操作系统 (周一至周五)</span></div>
+        <table>
+            <thead><tr><th>时间</th><th>时长</th><th>内容</th><th>具体任务</th><th>工具/资源</th></tr></thead>
+            <tbody>
+                <tr><td>19:00-20:20</td><td>1h20m</td><td>计组视频</td><td>纪禄平《计组》1-2节，理解CPU/内存/流水线</td><td>国家平台</td></tr>
+                <tr><td>20:30-21:30</td><td>1h</td><td>实验/阅读</td><td>教材对应章节 + C语言模拟硬件(如缓存)</td><td>C语言/教材</td></tr>
+                <tr><td>21:30-22:00</td><td>30min</td><td>复习/预习</td><td>回顾数据结构/预习OS概念</td><td>笔记</td></tr>
+                <tr><td colspan="5" style="background:#f6faff;"><strong>周末 (6h):</strong> 搭建Linux 0.11实验环境 + 开始看李治军OS视频</td></tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px;"><span class="badge">🔹 第三阶段：计算机网络 → 数据库 (周一至周五)</span></div>
+        <table>
+            <thead><tr><th>时间</th><th>时长</th><th>内容</th><th>具体任务</th><th>工具/资源</th></tr></thead>
+            <tbody>
+                <tr><td>19:00-20:20</td><td>1h20m</td><td>网络视频</td><td>李全龙《计算机网络》+ Wireshark抓包</td><td>Wireshark</td></tr>
+                <tr><td>20:30-21:30</td><td>1h</td><td>网络编程</td><td>C语言Socket (TCP/UDP 客户端/服务器)</td><td>Linux/gcc</td></tr>
+                <tr><td>21:30-22:00</td><td>30min</td><td>数据库预习</td><td>阅读王珊《数据库系统概论》对应章节</td><td>教材</td></tr>
+                <tr><td colspan="5" style="background:#f6faff;"><strong>周末 (6h):</strong> MySQL实战 + SQL练习 + 设计简单业务表</td></tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px;"><span class="badge">🔸 第四阶段：Java + 综合项目 (周一至周五)</span></div>
+        <table>
+            <thead><tr><th>时间</th><th>时长</th><th>内容</th><th>具体任务</th><th>工具/资源</th></tr></thead>
+            <tbody>
+                <tr><td>19:00-20:30</td><td>1.5h</td><td>Java基础+框架</td><td>Java语法/面向对象 → Spring Boot (黑马/尚硅谷)</td><td>视频/IDEA</td></tr>
+                <tr><td>20:40-22:00</td><td>1h20m</td><td>项目开发</td><td>“在线笔记”功能模块开发，每天一个小功能</td><td>GitHub/IDEA</td></tr>
+                <tr><td colspan="5" style="background:#f6faff;"><strong>周末 (6h):</strong> 项目整合、部署云服务器(AWS/阿里云)</td></tr>
+            </tbody>
+        </table>
+
+        <!-- 每周进度跟踪表(示例) -->
+        <div class="section-title">📈 三、每周进度跟踪表 (模板)</div>
+        <table>
+            <thead><tr><th>周次</th><th>日期范围</th><th>本周学习内容</th><th>遇到的问题</th><th>下周计划</th><th>自我评分(1-5)</th></tr></thead>
+            <tbody>
+                <tr><td>第1周</td><td>__月__日-__月__日</td><td>C语言基础：变量/循环/函数</td><td>指针概念模糊</td><td>数组与指针深入</td><td></td></tr>
+                <tr><td>第2周</td><td>__月__日-__月__日</td><td>...</td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+        <div class="progress-template">
+            ⭐ 建议：每周日晚复盘30分钟，填写此表，并在GitHub更新代码。
+        </div>
+
+        <!-- 资源清单 -->
+        <div class="section-title">📚 四、核心资源清单</div>
+        <table>
+            <thead><tr><th>课程名称</th><th>主讲/来源</th><th>学习平台</th><th>配套教材</th><th>备注</th></tr></thead>
+            <tbody>
+                <tr><td>C语言程序设计</td><td>国家智慧教育平台</td><td>国家高等教育智慧教育平台</td><td>清华社《C语言程序设计》(2025版)</td><td>项目贯穿全程</td></tr>
+                <tr><td>数据结构</td><td>陈越</td><td>中国大学MOOC</td><td>《数据结构（第2版）》</td><td>必须用C实现算法</td></tr>
+                <tr><td>计算机组成原理</td><td>纪禄平</td><td>国家智慧教育平台</td><td>纪禄平《计组》第6版</td><td>初学者友好，建框架</td></tr>
+                <tr><td>操作系统</td><td>李治军</td><td>中国大学MOOC/B站</td><td>《操作系统：设计与实现》</td><td>建议Linux 0.11实验</td></tr>
+                <tr><td>计算机网络</td><td>李全龙</td><td>中国大学MOOC</td><td>《计算机网络：自顶向下》</td><td>配合Wireshark</td></tr>
+                <tr><td>数据库系统概论</td><td>王珊</td><td>中国大学MOOC</td><td>《数据库系统概论》第5版</td><td>重点SQL和事务</td></tr>
+                <tr><td>Java + Spring Boot</td><td>黑马/尚硅谷</td><td>B站/机构官网</td><td>《Spring Boot实战》最新版</td><td>选2025/2026版</td></tr>
+            </tbody>
+        </table>
+
+        <!-- 关键执行原则 -->
+        <div class="section-title">⚙️ 五、关键执行原则</div>
+        <div class="note-box">
+            <ul style="margin: 0;">
+                <li><strong>每日必做</strong>：保证最低2小时编码，所有代码上传 GitHub。</li>
+                <li><strong>每周复盘</strong>：周日晚上填写进度跟踪表，总结得失。</li>
+                <li><strong>项目驱动</strong>：每个阶段必须完成规定的产出项目，写成博客。</li>
+                <li><strong>弹性调整</strong>：缺勤周末补，但不要停滞超过3天。</li>
+                <li><strong>寻找伙伴</strong>：加入掘金、V2EX、CSDN等技术社区，分享笔记。</li>
+            </ul>
+        </div>
+
+        <!-- 备注信息 -->
+        <div class="footer-meta">
+            <span><strong>姓名：</strong>___________________</span>
+            <span><strong>开始日期：</strong>________________</span>
+            <span><strong>结束日期：</strong>________________</span>
+        </div>
+        <p style="color:#7689a5; font-size:0.9rem; text-align:right; margin-top: 15px;">🎯 基于每天3h(工作日)+6h(周末)设计 · 可根据个人节奏缩放</p>
+    </div>
+</div>
+
+<script>
+    (function() {
+        const downloadBtn = document.getElementById('downloadWordBtn');
+
+        // 构建要下载的word文档的html内容（包含样式+计划内容）
+        function generateWordHTML() {
+            // 获取计划内容的HTML (从 planContent 里复制结构，保留完整样式)
+            const planContentElem = document.getElementById('planContent');
+            let contentHTML = planContentElem.outerHTML;
+
+            // 单独取出一些样式复制到word中
+            const styles = document.querySelector('style').innerHTML;
+
+            // 构造完整word文档
+            return `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>计算机核心基础学习计划表</title>
+                <style>
+                    ${styles}
+                    body { padding: 30px 20px; background: white; }
+                    .plan-container { max-width: 1280px; margin: 0 auto; box-shadow: none; padding: 30px; }
+                    .download-area, #downloadWordBtn { display: none; }
+                </style>
+            </head>
+            <body>
+                <div class="plan-container">
+                    <h1 style="border-left-color: #3b82f6;">🧠 计算机核心基础 · 系统学习计划</h1>
+                    <div class="subhead" style="margin-left:33px;">C → 数据结构 → 计组 → OS → 网络 → 数据库 → Java/项目 · 12个月直达职场</div>
+                    ${contentHTML}
+                </div>
+            </body>
+            </html>
+            `;
+        }
+
+        downloadBtn.addEventListener('click', function() {
+            const fullHTML = generateWordHTML();
+            // 创建blob并下载
+            const blob = new Blob([fullHTML], { type: 'application/msword' }); // 使用msword类型
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = '计算机核心基础学习计划表.doc';  // 文件名
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+        });
+    })();
+</script>
+<!-- 额外的样式：保证word内表格好看 -->
+</body>
+</html>

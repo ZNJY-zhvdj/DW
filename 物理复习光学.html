@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>光学干涉衍射偏振考点总结</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+        body {
+            padding: 40px;
+            line-height: 1.8;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+        }
+        h2 {
+            color: #007bff;
+            margin: 25px 0 15px;
+            font-size: 1.2em;
+        }
+        .formula {
+            background: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            margin: 10px 0;
+            font-family: "Times New Roman", serif;
+        }
+        .btn-download {
+            display: block;
+            width: 200px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 30px auto;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-download:hover {
+            background: #0056b3;
+        }
+        p, li {
+            color: #555;
+            font-size: 15px;
+        }
+        ul {
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <!-- 引入生成Word的核心库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.37.15/docxtemplater.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzip/3.1.4/pizzip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzip/3.1.4/pizzip-utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/file-saver/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.1.0/jszip-utils.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>光学干涉衍射偏振核心考点总结</h1>
+        
+        <h2>1. 等厚干涉（空气劈尖）</h2>
+        <p><strong>等厚含义</strong>：同一级条纹对应空气膜厚度相同。</p>
+        <p>相邻明/暗纹对应的厚度差：</p>
+        <div class="formula">Δd = λ/2</div>
+        <p>微小厚度/直径计算公式：</p>
+        <div class="formula">d = N · λ/2 （N为条纹数）</div>
+
+        <h2>2. 杨氏双缝干涉实验</h2>
+        <p><strong>单色光条纹特点</strong>：等间距、平行、明暗相间的直条纹，中央为明纹。</p>
+        <p><strong>白光照射现象</strong>：</p>
+        <ul>
+            <li>中央：白色明纹</li>
+            <li>两侧：彩色条纹（紫在内、红在外）</li>
+            <li>高级次：条纹重叠模糊</li>
+        </ul>
+
+        <h2>3. 杨氏双缝干涉计算</h2>
+        <p>相邻明/暗纹间距：</p>
+        <div class="formula">Δx = (Lλ)/d</div>
+        <p>已知间距求入射光波长：</p>
+        <div class="formula">λ = (dΔx)/L</div>
+        <p>说明：d为缝间距，L为屏到缝的距离，λ为入射光波长。</p>
+
+        <h2>4. 弗琅禾费单缝衍射</h2>
+        <p><strong>暗纹条件</strong>：</p>
+        <div class="formula">a sinθ = kλ （k=±1,±2,…）</div>
+        <p><strong>明纹条件（近似）</strong>：</p>
+        <div class="formula">a sinθ = (2k+1)λ/2 （k=±1,±2,…）</div>
+        <p><strong>半波带个数与明暗纹判断</strong>：</p>
+        <ul>
+            <li>暗纹：半波带数N=2k（偶数，光波相互抵消）</li>
+            <li>明纹：半波带数N=2k+1（奇数，剩余一个半波带的光未抵消）</li>
+        </ul>
+        <p>说明：a为缝宽，θ为衍射角。</p>
+
+        <h2>5. 光栅方程</h2>
+        <p>核心光栅方程：</p>
+        <div class="formula">(a+b) sinθ = kλ （k=0,±1,±2,…）</div>
+        <p>最高衍射级次计算（|sinθ|≤1）：</p>
+        <div class="formula">k_max = ⎣(a+b)/λ⎦ （取整数部分）</div>
+        <p>说明：a+b为光栅常数，k为衍射级次。</p>
+
+        <h2>6. 马吕斯定律</h2>
+        <p>线偏振光通过偏振片后的光强计算：</p>
+        <div class="formula">I = I₀ cos²α</div>
+        <p>说明：I₀为入射光强，α为入射光振动方向与偏振片透振方向的夹角。</p>
+
+        <h2>7. 光的偏振原理应用</h2>
+        <ul>
+            <li><strong>早晨/傍晚拍照不清晰</strong>：地面/水面反射光为水平偏振光，使用偏振镜旋转至消光位置，减弱反射光，提升清晰度。</li>
+            <li><strong>白天橱窗看不清内部</strong>：玻璃反射光为线偏振光，加偏振片并旋转，消除反射眩光，看清内部物体。</li>
+        </ul>
+
+        <!-- 下载按钮 -->
+        <button class="btn-download" onclick="downloadWord()">下载Word文档</button>
+    </div>
+
+    <script>
+        // 生成并下载Word文档的核心函数
+        function downloadWord() {
+            // 1. 定义Word文档的内容模板（XML格式）
+            const templateContent = `<?xml version="1.0" encoding="UTF-8"?>
+            <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+                <w:body>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">光学干涉衍射偏振核心考点总结</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">1. 等厚干涉（空气劈尖）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">等厚含义：同一级条纹对应空气膜厚度相同。</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">相邻明/暗纹对应的厚度差：Δd = λ/2</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">微小厚度/直径计算公式：d = N · λ/2 （N为条纹数）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">2. 杨氏双缝干涉实验</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">单色光条纹特点：等间距、平行、明暗相间的直条纹，中央为明纹。</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">白光照射现象：</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">  - 中央：白色明纹</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">  - 两侧：彩色条纹（紫在内、红在外）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">  - 高级次：条纹重叠模糊</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">3. 杨氏双缝干涉计算</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">相邻明/暗纹间距：Δx = (Lλ)/d</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">已知间距求入射光波长：λ = (dΔx)/L</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">说明：d为缝间距，L为屏到缝的距离，λ为入射光波长。</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">4. 弗琅禾费单缝衍射</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">暗纹条件：a sinθ = kλ （k=±1,±2,…）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">明纹条件（近似）：a sinθ = (2k+1)λ/2 （k=±1,±2,…）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">半波带个数与明暗纹判断：</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">  - 暗纹：半波带数N=2k（偶数，光波相互抵消）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">  - 明纹：半波带数N=2k+1（奇数，剩余一个半波带的光未抵消）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">说明：a为缝宽，θ为衍射角。</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">5. 光栅方程</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">核心光栅方程：(a+b) sinθ = kλ （k=0,±1,±2,…）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">最高衍射级次计算（|sinθ|≤1）：k_max = ⎣(a+b)/λ⎦ （取整数部分）</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">说明：a+b为光栅常数，k为衍射级次。</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">6. 马吕斯定律</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">线偏振光通过偏振片后的光强计算：I = I₀ cos²α</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">说明：I₀为入射光强，α为入射光振动方向与偏振片透振方向的夹角。</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">7. 光的偏振原理应用</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">  - 早晨/傍晚拍照不清晰：地面/水面反射光为水平偏振光，使用偏振镜旋转至消光位置，减弱反射光，提升清晰度。</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:br/>
+                        </w:r>
+                    </w:p>
+                    <w:p>
+                        <w:r>
+                            <w:t xml:space="preserve">  - 白天橱窗看不清内部：玻璃反射光为线偏振光，加偏振片并旋转，消除反射眩光，看清内部物体。</w:t>
+                        </w:r>
+                    </w:p>
+                    <w:sectPr>
+                        <w:pgSz w:w="11906" w:h="16838"/>
+                        <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
+                    </w:sectPr>
+                </w:body>
+            </w:document>`;
+
+            // 2. 创建Zip对象并加载模板
+            const zip = new PizZip();
+            zip.file('word/document.xml', templateContent);
+            
+            // 添加Word文档必需的配置文件
+            zip.file('[Content_Types].xml', `<?xml version="1.0" encoding="UTF-8"?>
+            <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+                <Default Extension="xml" ContentType="application/xml"/>
+                <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+                <Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
+            </Types>`);
+            
+            zip.file('_rels/.rels', `<?xml version="1.0" encoding="UTF-8"?>
+            <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+                <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+            </Relationships>`);
+
+            // 3. 生成Word文件并下载
+            const out = zip.generate({
+                type: 'blob',
+                mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            });
+            saveAs(out, '光学干涉衍射偏振考点总结.docx');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学物理（2）补考复习答案</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .wrapper {
+            max-width: 1000px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 40px 50px;
+            border-radius: 8px;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 12px;
+            margin-top: 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-left: 6px solid #3498db;
+            padding-left: 15px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            background-color: #ecf5fb;
+            line-height: 1.4;
+        }
+        h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+            margin-top: 25px;
+            font-weight: 600;
+        }
+        h4 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 6px;
+            margin-top: 20px;
+            font-weight: 600;
+            background-color: #f2f6f9;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        p, li {
+            font-size: 1.05em;
+            line-height: 1.6;
+            color: #2c3e50;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 1.0em;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #2980b9;
+        }
+        td {
+            padding: 10px 8px;
+            border: 1px solid #bdc3c7;
+            vertical-align: top;
+        }
+        .note {
+            background-color: #fef9e7;
+            border-left: 4px solid #f1c40f;
+            padding: 12px 18px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+            font-style: italic;
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+            margin-bottom: 25px;
+            border: 2px solid #2ecc71;
+        }
+        .btn-download:hover {
+            background-color: #2ecc71;
+            transform: scale(1.02);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        .btn-container {
+            text-align: right;
+        }
+        hr {
+            border: 1px solid #ecf0f1;
+            margin: 25px 0;
+        }
+        sub, sup {
+            font-size: 0.8em;
+        }
+        .formula {
+            font-style: italic;
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .emph {
+            font-weight: 600;
+            color: #c0392b;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="btn-container">
+            <button class="btn-download" id="downloadBtn">📥 下载 Word 文档</button>
+        </div>
+        <h1>大学物理（2）补考复习提纲 · 答案详析</h1>
+
+        <!-- 全部内容容器，用于下载时提取 -->
+        <div id="content">
+
+            <!-- 第七章 气体动理论 -->
+            <h2>第七章 气体动理论</h2>
+
+            <h4>1. 掌握理想气体状态方程的表达式（宏观和微观两种）。</h4>
+            <p><span class="emph">宏观形式：</span> \(pV = nRT\)，其中 \(p\) 为压强，\(V\) 为体积，\(n\) 为物质的量，\(R = 8.314 \, \text{J/(mol·K)}\) 为摩尔气体常量，\(T\) 为热力学温度。</p>
+            <p><span class="emph">微观形式：</span> \(pV = \frac{1}{3} N m \overline{v^2}\)，其中 \(N\) 为分子总数，\(m\) 为单个分子质量，\(\overline{v^2}\) 为分子速率平方的平均值。也可写作 \(p = \frac{2}{3} n \overline{\varepsilon_k}\)，其中 \(n = N/V\) 为分子数密度，\(\overline{\varepsilon_k} = \frac{1}{2} m \overline{v^2}\) 为分子平均平动动能。</p>
+
+            <h4>2. 掌握理想气体的压强公式及其微观意义，并且可以利用此方程解决实际问题。</h4>
+            <p><span class="emph">压强公式：</span> \(p = \frac{2}{3} n \overline{\varepsilon_k}\) 或 \(p = \frac{1}{3} n m \overline{v^2}\)。<br>
+            <span class="emph">微观意义：</span> 压强是大量分子对器壁碰撞的统计平均结果，与分子数密度和分子平均平动动能成正比。<br>
+            <span class="emph">应用：</span> 例如已知 \(p, V, T\) 可求分子平均动能；或由分子平均动能估算压强变化。</p>
+
+            <h4>3. 掌握理想气体的温度公式及其微观本质，并根据此原理能解决实际问题。</h4>
+            <p><span class="emph">温度公式：</span> \(\overline{\varepsilon_k} = \frac{3}{2} kT\)，其中 \(k = 1.38 \times 10^{-23} \, \text{J/K}\) 为玻尔兹曼常量。<br>
+            <span class="emph">微观本质：</span> 温度是分子热运动剧烈程度的量度，与分子平均平动动能成正比。<br>
+            <span class="emph">应用：</span> 可求给定温度下的分子平均动能，或由动能求温度。</p>
+
+            <h4>4. 掌握常见气体分子的自由度，掌握能量均分定理的内容表述。</h4>
+            <p><span class="emph">自由度：</span> 单原子分子（如 He）自由度为 3（平动）；双原子分子（如 O₂）常温下自由度为 5（3 平动 + 2 转动）；多原子分子（如 H₂O）常温下自由度为 6（3 平动 + 3 转动）。</p>
+            <p><span class="emph">能量均分定理：</span> 在温度为 \(T\) 的平衡态下，分子每个自由度的平均动能均为 \(\frac{1}{2} kT\)。因此，分子平均总动能 \(\overline{\varepsilon} = \frac{i}{2} kT\)，其中 \(i\) 为自由度。</p>
+
+            <h4>5. 掌握理想气体内能的概念。</h4>
+            <p>对于理想气体，忽略分子间势能，内能等于所有分子热运动动能之和。内能 \(U = \frac{m}{M} \cdot \frac{i}{2} RT = \frac{i}{2} nRT\)。内能只与温度有关，与体积、压强无关。</p>
+
+            <!-- 第八章 热力学基础 -->
+            <h2>第八章 热力学基础</h2>
+
+            <h4>1. 掌握热力学第一定律的文字描述、公式及各量的含义，会利用公式进行相关计算；理解第一类永动机的原理，结合热力学第一定律，了解第一类永动机不能制成的原因。</h4>
+            <p><span class="emph">热力学第一定律：</span> 系统从外界吸收的热量，一部分用于增加系统的内能，另一部分用于对外做功。公式：\(\Delta U = Q + W\)（其中 \(Q\) 为吸热，\(W\) 为外界对系统做功）。</p>
+            <p><span class="emph">第一类永动机：</span> 指不消耗能量而不断对外做功的机器。它违背热力学第一定律（能量守恒），不可能制成。</p>
+
+            <h4>2. 掌握等体过程、等压过程、等温过程、绝热过程吸收热量 \(Q\)、对外做功 \(W\) 及内能增量 \(\Delta U\) 的计算。</h4>
+            <table>
+                <tr><th>过程</th><th>特征</th><th>\(Q\)</th><th>\(W\)（系统对外做功）</th><th>\(\Delta U\)</th></tr>
+                <tr><td>等体</td><td>\(V\) 不变</td><td>\(n C_V (T_2 - T_1)\)</td><td>0</td><td>\(n C_V (T_2 - T_1)\)</td></tr>
+                <tr><td>等压</td><td>\(p\) 不变</td><td>\(n C_p (T_2 - T_1)\)</td><td>\(p (V_2 - V_1) = nR(T_2 - T_1)\)</td><td>\(n C_V (T_2 - T_1)\)</td></tr>
+                <tr><td>等温</td><td>\(T\) 不变</td><td>\(nRT \ln\frac{V_2}{V_1}\)</td><td>\(nRT \ln\frac{V_2}{V_1}\)</td><td>0</td></tr>
+                <tr><td>绝热</td><td>\(Q = 0\)</td><td>0</td><td>\(-\Delta U\) 或由 \(pV^\gamma\) 积分</td><td>\(n C_V (T_2 - T_1)\)</td></tr>
+            </table>
+            <p>其中 \(C_p = C_V + R\)，\(\gamma = C_p / C_V\)。</p>
+
+            <h4>3. 掌握热机循环、致冷机循环的概念、特点，会解决实际问题，熟练计算热机循环的效率。</h4>
+            <p><span class="emph">热机循环：</span> 从高温热源吸热 \(Q_1\)，对外做功 \(W\)，向低温热源放热 \(Q_2\)，效率 \(\eta = \frac{W}{Q_1} = 1 - \frac{Q_2}{Q_1}\)。</p>
+            <p><span class="emph">致冷机循环：</span> 外界做功 \(W\)，从低温热源吸热 \(Q_2\)，向高温热源放热 \(Q_1\)，制冷系数 \(\varepsilon = \frac{Q_2}{W} = \frac{Q_2}{Q_1 - Q_2}\)。</p>
+            <p>计算时需根据循环各过程求出吸热总和 \(Q_1\) 及放热总和 \(Q_2\)，或由 \(p-V\) 图面积得净功 \(W\)。</p>
+
+            <h4>4. 掌握卡诺热机效率、卡诺致冷机制冷系数的计算。</h4>
+            <p><span class="emph">卡诺热机效率：</span> \(\eta_C = 1 - \frac{T_2}{T_1}\)（\(T_1\) 高温热源温度，\(T_2\) 低温热源温度，热力学温标）。</p>
+            <p><span class="emph">卡诺致冷机制冷系数：</span> \(\varepsilon_C = \frac{T_2}{T_1 - T_2}\)。</p>
+
+            <h4>5. 理解热力学第二定律的开尔文表述和克劳修斯表述。</h4>
+            <p><span class="emph">开尔文表述：</span> 不可能从单一热源吸收热量使之完全变为有用功而不产生其他影响。</p>
+            <p><span class="emph">克劳修斯表述：</span> 不可能把热量从低温物体传到高温物体而不引起其他变化。两种表述等价。</p>
+
+            <!-- 第九章 机械振动 -->
+            <h2>第九章 机械振动</h2>
+
+            <h4>1. 理解利用弹簧振子模型分析测量物体质量的实验方案及计算方法。</h4>
+            <p>弹簧振子周期 \(T = 2\pi \sqrt{\frac{m}{k}}\)。若已知劲度系数 \(k\)，测 \(T\) 可得 \(m = \frac{kT^2}{4\pi^2}\)。若 \(k\) 未知，可先加已知质量 \(m_0\) 测 \(T_0\)，再测未知质量 \(m_x\) 的周期 \(T_x\)，由 \(\frac{T_x}{T_0} = \sqrt{\frac{m_x}{m_0}}\) 得 \(m_x = m_0 \left( \frac{T_x}{T_0} \right)^2\)。</p>
+
+            <h4>2. 会用旋转矢量法确定简谐振动状态。</h4>
+            <p>旋转矢量法：将简谐振动 \(x = A\cos(\omega t + \varphi)\) 对应长度为 \(A\) 的矢量，以角速度 \(\omega\) 逆时针旋转，\(t\) 时刻矢量与 \(x\) 轴夹角为 \(\omega t + \varphi\)，矢量在 \(x\) 轴投影即为位移。可直观确定相位、初相、速度方向。</p>
+
+            <h4>3. 掌握简谐振动的能量特征，会计算简谐振动中特殊位置的能量。</h4>
+            <p>总能量 \(E = \frac{1}{2} kA^2\) 恒定。动能 \(E_k = \frac{1}{2} m v^2 = \frac{1}{2} k (A^2 - x^2)\)，势能 \(E_p = \frac{1}{2} k x^2\)。平衡位置 (\(x=0\)) 动能最大 \(\frac{1}{2} kA^2\)，势能为 0；最大位移 (\(x=\pm A\)) 势能最大，动能为 0。</p>
+
+            <h4>4. 掌握同方向同频率简谐振动的合成，会计算两分振动同向或反向时合振动的振幅和初相位。</h4>
+            <p>合振动 \(x = A\cos(\omega t + \varphi)\)，振幅 \(A = \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos(\varphi_2 - \varphi_1)}\)，初相 \(\tan\varphi = \frac{A_1\sin\varphi_1 + A_2\sin\varphi_2}{A_1\cos\varphi_1 + A_2\cos\varphi_2}\)。同相（相位差 \(2k\pi\)）时 \(A = A_1 + A_2\)；反相（相位差 \((2k+1)\pi\)）时 \(A = |A_1 - A_2|\)。</p>
+
+            <!-- 第十章 机械波 -->
+            <h2>第十章 机械波</h2>
+
+            <h4>1. 掌握根据波函数求波速、波长、频率、周期等相关物理量的方法。</h4>
+            <p>波函数一般形式 \(y = A\cos(\omega t - kx + \varphi)\) 或 \(y = A\cos\left[2\pi\left(\frac{t}{T} - \frac{x}{\lambda}\right) + \varphi\right]\)。角频率 \(\omega\)，频率 \(\nu = \frac{\omega}{2\pi}\)，周期 \(T = \frac{1}{\nu}\)，波数 \(k = \frac{2\pi}{\lambda}\)，波长 \(\lambda = \frac{2\pi}{k}\)，波速 \(u = \frac{\omega}{k} = \lambda \nu\)。</p>
+
+            <h4>2. 掌握干涉加强和干涉减弱的条件（分别用相位差和波程差表示），会计算干涉加强或减弱时某处的合振幅。</h4>
+            <p>两列相干波，相位差 \(\Delta\varphi = \varphi_2 - \varphi_1 - \frac{2\pi}{\lambda}(r_2 - r_1)\)。加强条件：\(\Delta\varphi = 2k\pi\) 或波程差 \(\delta = r_2 - r_1 = k\lambda\)；减弱条件：\(\Delta\varphi = (2k+1)\pi\) 或 \(\delta = (2k+1)\frac{\lambda}{2}\)。合振幅 \(A = \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos\Delta\varphi}\)，加强时 \(A = A_1 + A_2\)，减弱时 \(A = |A_1 - A_2|\)。</p>
+
+            <h4>3. 掌握驻波形成的条件，掌握驻波“驻”字的含义，并理解弦线驻波的形成条件。</h4>
+            <p><span class="emph">形成条件：</span>两列振幅相同、传播方向相反的相干波叠加形成。<span class="emph">“驻”的含义：</span>波形不传播，各点以各自振幅振动，有波节（振幅为零）和波腹（振幅最大）。<span class="emph">弦线驻波：</span>两端固定弦线上，当弦长等于半波长的整数倍时形成驻波，即 \(L = n\frac{\lambda}{2}\)（\(n=1,2,\cdots\)）。</p>
+
+            <!-- 第十一章 波动光学 -->
+            <h2>第十一章 波动光学</h2>
+
+            <h4>1. 掌握光程的概念，理解光程的物理意义，掌握光程差和相位差之间的关系，并会计算反射光的光程差。</h4>
+            <p><span class="emph">光程：</span> \(L = nr\)，等效于在真空中通过相同时间的路程。光程差 \(\Delta\) 与相位差 \(\Delta\varphi\) 关系：\(\Delta\varphi = \frac{2\pi}{\lambda} \Delta\)（\(\lambda\) 为真空中波长）。反射光考虑半波损失，当光从光疏介质射向光密介质界面反射时，反射光相位突变 \(\pi\)，相当于增加（或减少）\(\lambda/2\) 的光程。</p>
+
+            <h4>2. 掌握等厚干涉中“等厚”的含义，掌握根据空气劈尖计算微小厚度（或微小直径）的方法。</h4>
+            <p><span class="emph">等厚干涉：</span>干涉条纹由薄膜厚度相同的地方形成。空气劈尖：相邻明纹（或暗纹）对应空气厚度差 \(\Delta e = \frac{\lambda}{2}\)。若测得条纹间距 \(l\)，劈尖角 \(\theta\)，则 \(\Delta e = l \theta\)，可求微小厚度或直径。</p>
+
+            <h4>3. 掌握杨氏双缝干涉实验的条纹特点，并会描述白光照射时的现象。</h4>
+            <p><span class="emph">条纹特点：</span>等间距明暗相间直条纹，中央为零级明纹。条纹间距 \(\Delta x = \frac{D}{d} \lambda\)（\(D\) 屏到缝距离，\(d\) 缝间距）。<span class="emph">白光照射：</span>中央明纹白色，两侧出现彩色条纹，紫色在内侧，红色在外侧，高级次重叠可能混合成白光。</p>
+
+            <h4>4. 会根据杨氏双缝干涉实验已知明纹、暗纹的间距求入射光的波长；会计算相邻条纹的间距。</h4>
+            <p>由 \(\Delta x = \frac{D}{d} \lambda\) 得 \(\lambda = \frac{d}{D} \Delta x\)。相邻条纹间距即为 \(\Delta x = \frac{D}{d} \lambda\)。</p>
+
+            <h4>5. 掌握衍射的概念，并会解释生活中的衍射现象，会描述声波衍射比光波衍射现象显著的原因。</h4>
+            <p><span class="emph">衍射：</span>波遇到障碍物或小孔时偏离直线传播的现象。生活实例：泊松亮斑、单缝衍射。声波衍射显著因为声波波长较长（米量级），与障碍物尺寸可比；光波波长很短（几百纳米），日常障碍物远大于波长，衍射不明显。</p>
+
+            <h4>6. 掌握弗琅禾费单缝衍射的明、暗纹条件，会计算缝宽、半波带的个数，并根据半波带个数判断明暗纹。</h4>
+            <p><span class="emph">暗纹条件：</span> \(a\sin\theta = k\lambda\)（\(k=\pm1,\pm2,\cdots\)），偶数个半波带。<span class="emph">明纹（近似）条件：</span> \(a\sin\theta = (2k+1)\frac{\lambda}{2}\)，奇数个半波带。半波带数 \(N = \frac{2a\sin\theta}{\lambda}\)，整数时偶数暗纹、奇数明纹。中央明纹对应 \(\theta=0\)，半波带无穷多。</p>
+
+            <h4>7. 掌握光栅方程，会根据已知条件计算入射光的衍射角、最高级次。</h4>
+            <p><span class="emph">光栅方程：</span> \(d\sin\theta = k\lambda\)（\(k=0,\pm1,\pm2,\cdots\)），\(d\) 为光栅常数。衍射角 \(\sin\theta = \frac{k\lambda}{d}\)，最高级次 \(k_{\max} = \left\lfloor \frac{d}{\lambda} \right\rfloor\)。</p>
+
+            <h4>8. 掌握马吕斯定律，并会根据马吕斯定律计算光强。</h4>
+            <p><span class="emph">马吕斯定律：</span> 线偏振光通过检偏器后，透射光强 \(I = I_0 \cos^2\theta\)，\(\theta\) 为偏振方向与检偏器透振方向夹角。若入射为自然光，通过起偏器后光强减半，再通过检偏器再乘 \(\cos^2\theta\)。</p>
+
+            <h4>9. 能够利用光的偏振原理解决问题（早晨傍晚拍照不清晰、白天橱窗中物体不清晰）。</h4>
+            <p><span class="emph">早晨傍晚拍照不清晰：</span> 太阳光经大气散射后部分偏振，加偏振镜可滤除特定方向偏振光，减少天空杂散光，提高对比度。<span class="emph">白天橱窗中物体不清晰：</span> 橱窗玻璃反射光为部分偏振光，佩戴偏振太阳镜或相机加偏振镜可消除反射光干扰，看清内部物体。</p>
+
+            <hr>
+            <p style="text-align: right; color: #7f8c8d;">—— 复习提纲答案完 ——</p>
+        </div> <!-- end content -->
+    </div> <!-- end wrapper -->
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // 获取要下载的内容
+            const content = document.getElementById('content').innerHTML;
+
+            // 获取页面样式 (可能有多个style，全部提取合并)
+            const styleNodes = document.querySelectorAll('style');
+            let styles = '';
+            styleNodes.forEach(style => {
+                styles += style.innerHTML;
+            });
+
+            // 构建完整的word文档html
+            const fullHtml = `
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>大学物理2补考复习答案</title>
+                    <style>
+                        ${styles}
+                        /* 额外保证打印或word阅读样式 */
+                        body { background: white; padding: 30px; }
+                        .wrapper { max-width: 1000px; margin: 0 auto; }
+                        .btn-container, .btn-download { display: none; } /* 下载文档中隐藏按钮 */
+                    </style>
+                </head>
+                <body>
+                    <div class="wrapper">
+                        <h1>大学物理（2）补考复习提纲 · 答案详析</h1>
+                        ${content}
+                    </div>
+                </body>
+                </html>
+            `;
+
+            // 创建blob并下载
+            const blob = new Blob([fullHtml], { type: 'application/msword' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '大学物理2补考复习答案.doc';
+            document.body.appendChild(link); // 临时添加
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        });
+    </script>
+</body>
+</html>

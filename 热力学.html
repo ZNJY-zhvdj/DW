@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热力学·热机效率笔记（打印版）</title>
+    <style>
+        /* 打印友好样式 — 简洁、易读、保留结构 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Times New Roman', '宋体', 'SimSun', 'Georgia', serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.5;
+            font-size: 12pt;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5cm 1.5cm;
+            box-shadow: none;
+        }
+        h1 {
+            font-size: 22pt;
+            text-align: center;
+            margin-bottom: 20pt;
+            font-weight: bold;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8pt;
+        }
+        h2 {
+            font-size: 16pt;
+            margin-top: 20pt;
+            margin-bottom: 8pt;
+            font-weight: 600;
+            border-left: 4px solid #2c3e50;
+            padding-left: 12pt;
+        }
+        h3 {
+            font-size: 14pt;
+            margin-top: 16pt;
+            margin-bottom: 6pt;
+            font-weight: 600;
+            color: #1e3c5c;
+        }
+        p, li {
+            margin-bottom: 6pt;
+            text-align: justify;
+        }
+        ul {
+            margin-left: 24pt;
+            margin-bottom: 12pt;
+        }
+        .formula {
+            font-family: 'Courier New', 'Times New Roman', monospace;
+            background-color: #f9f9f9;
+            border-left: 3px solid #7f8c8d;
+            padding: 6pt 12pt;
+            margin: 10pt 0 12pt 20pt;
+            font-size: 13pt;
+            letter-spacing: 0.2px;
+            page-break-inside: avoid;
+        }
+        .formula var, .formula i {
+            font-style: italic;
+            padding: 0 2px;
+        }
+        .formula sub {
+            font-size: 80%;
+        }
+        .note {
+            font-style: italic;
+            background-color: #f1f1f1;
+            padding: 4pt 10pt;
+            border-radius: 3px;
+            margin: 10pt 0;
+            border: 1px dashed #aaa;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18pt 0;
+        }
+        .separator-light {
+            height: 1px;
+            background: #ddd;
+            margin: 15pt 0;
+        }
+        .footer-meta {
+            margin-top: 30pt;
+            font-size: 10pt;
+            color: #444;
+            text-align: right;
+            border-top: 1px solid #ccc;
+            padding-top: 8pt;
+        }
+        /* 保证打印时超链接不出现颜色 */
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        /* 针对上下标 */
+        sup {
+            font-size: 0.8em;
+            vertical-align: super;
+        }
+        sub {
+            font-size: 0.8em;
+            vertical-align: sub;
+        }
+        /* 特殊变量保持斜体 */
+        var, i {
+            font-style: italic;
+        }
+        .greek {
+            font-family: 'Symbol', 'Times New Roman', serif;
+            font-style: normal;
+        }
+        @media print {
+            body {
+                padding: 0.8cm 1cm;
+                font-size: 11pt;
+            }
+            h1 { font-size: 20pt; }
+            h2 { font-size: 15pt; }
+            .formula { background: none; border-left: 2px solid #333; }
+        }
+    </style>
+</head>
+<body>
+
+<h1>📘 热力学基础 & 火力发电效率笔记</h1>
+<p style="text-align:center; color:#2c3e50;">（根据图片 IMG_6066 · 6067 · 6068 · 6070 整理）</p>
+
+<!-- ========= 一、热力学第一定律 ========= -->
+<h2>一、热力学第一定律</h2>
+<p>系统吸收的热量 <var>Q</var> 等于内能增量 <var>ΔE</var> 与对外做功 <var>A</var> 之和：</p>
+<div class="formula">
+    <var>Q</var> = <var>E</var><sub>2</sub> – <var>E</var><sub>1</sub> + <var>A</var>  (或 <var>ΔE</var> = <var>Q</var> – <var>A</var>)
+</div>
+<p>对于理想气体（物质的量 <var>ν</var>，自由度 <var>i</var>）：</p>
+<div class="formula">
+    <var>E</var><sub>2</sub> – <var>E</var><sub>1</sub> = <var>ν</var> · <var>i</var>/2 · <var>R</var> (<var>T</var><sub>2</sub> – <var>T</var><sub>1</sub>)<br>
+    <var>pV</var> = <var>νRT</var>
+</div>
+
+<!-- ========= 二、等体过程 ========= -->
+<h2>二、等体过程</h2>
+<p><strong>体积恒定</strong> ⇒ 做功 <var>A</var> = 0，热量全部转化为内能：</p>
+<div class="formula">
+    <var>Q</var><sub>V</sub> = <var>E</var><sub>2</sub> – <var>E</var><sub>1</sub> = <var>ν</var> <var>C</var><sub>V,m</sub> (<var>T</var><sub>2</sub> – <var>T</var><sub>1</sub>)<br>
+    <var>C</var><sub>V,m</sub> = <var>i</var>/2 · <var>R</var>  (摩尔定容热容)
+</div>
+
+<!-- ========= 三、等压过程 ========= -->
+<h2>三、等压过程</h2>
+<p><strong>压强恒定</strong>，系统做功及吸收热量：</p>
+<div class="formula">
+    功 <var>A</var> = <var>p</var>(<var>V</var><sub>2</sub> – <var>V</var><sub>1</sub>) = <var>νR</var>(<var>T</var><sub>2</sub> – <var>T</var><sub>1</sub>)<br>
+    热量 <var>Q</var><sub>p</sub> = <var>ν</var> <var>C</var><sub>p,m</sub> (<var>T</var><sub>2</sub> – <var>T</var><sub>1</sub>)<br>
+    <var>C</var><sub>p,m</sub> = <var>C</var><sub>V,m</sub> + <var>R</var> = (<var>i</var>/2 + 1)<var>R</var>
+</div>
+
+<!-- ========= 四、等温过程 ========= -->
+<h2>四、等温过程</h2>
+<p><strong>温度不变</strong> ⇒ 内能不变 <var>ΔE</var> = 0，吸收的热量全部用于对外做功：</p>
+<div class="formula">
+    <var>Q</var><sub>T</sub> = <var>A</var><sub>T</sub> = ∫<sub><var>V</var><sub>1</sub></sub><sup><var>V</var><sub>2</sub></sup> <var>p</var> d<var>V</var> = ∫<sub><var>V</var><sub>1</sub></sub><sup><var>V</var><sub>2</sub></sup> <var>νRT</var>/<var>V</var> d<var>V</var> = <var>νRT</var> ln(<var>V</var><sub>2</sub>/<var>V</var><sub>1</sub>)
+</div>
+<p class="note" style="margin-left:20pt;">※ 原笔记等温积分式略误，此处按热力学正确表达式整理。</p>
+
+<!-- ========= 五、循环过程 ========= -->
+<h2>五、循环过程</h2>
+<p>系统经历一系列变化回到初态，<strong><var>ΔE</var> = 0</strong>。p–V 图上：</p>
+<ul>
+    <li><strong>热机循环（正循环）</strong>：顺时针进行，系统对外做净功 <var>A</var> &gt; 0；</li>
+    <li><strong>制冷机循环（逆循环）</strong>：逆时针进行，外界对系统做功 <var>A</var> &lt; 0。</li>
+</ul>
+
+<h3>🔹 热机效率</h3>
+<div class="formula">
+    <var>η</var> = <var>A</var> / <var>Q</var><sub>1</sub> = (<var>Q</var><sub>1</sub> – <var>Q</var><sub>2</sub>) / <var>Q</var><sub>1</sub> = 1 – <var>Q</var><sub>2</sub>/<var>Q</var><sub>1</sub>
+</div>
+<p>其中 <var>Q</var><sub>1</sub> 为从高温热源吸收的热量，<var>Q</var><sub>2</sub> 为向低温热源放出的热量（取绝对值）。</p>
+
+<h3>🔹 制冷系数</h3>
+<div class="formula">
+    <var>e</var> = <var>Q</var><sub>2</sub> / <var>A</var> = <var>Q</var><sub>2</sub> / (<var>Q</var><sub>1</sub> – <var>Q</var><sub>2</sub>)
+</div>
+<p><var>Q</var><sub>2</sub> 是从低温热源吸收的热量，<var>A</var> 为外界对系统做的净功。</p>
+
+<!-- ========= 六、热力学第二定律 ========= -->
+<h2>六、热力学第二定律</h2>
+<p><strong>统计意义：</strong> 孤立系统从热力学概率小的状态向热力学概率大的状态进行的过程。</p>
+<p><strong>实质：</strong> 自然界一切与热现象有关的实际宏观过程都是不可逆的。</p>
+
+<!-- ========= 七、火力发电机组效率问题（应用题7.6） ========= -->
+<h2>七、火力发电机组效率（应用题 7.6）</h2>
+<p>火力发电机组可视为热机，其效率原则上为 <var>η</var> = 1 – <var>Q</var><sub>2</sub>/<var>Q</var><sub>1</sub>。由于实际过程复杂，通常借助<strong>卡诺循环</strong>讨论最高效率：</p>
+<div class="formula">
+    <var>η</var><sub>max</sub> = 1 – <var>T</var><sub>2</sub>/<var>T</var><sub>1</sub>  (卡诺热机)
+</div>
+<p>提高效率的途径：<strong>提高高温热源温度 <var>T</var><sub>1</sub></strong>，<strong>降低低温热源温度 <var>T</var><sub>2</sub></strong>。</p>
+
+<h3>🔸 超临界/超超临界机组</h3>
+<p>实际中通过提高水蒸气的温度（增大锅炉压强）来提高 <var>T</var><sub>1</sub>：</p>
+<ul>
+    <li><strong>超临界</strong> 机组温度高于亚临界 ⇒ 效率提高 <strong>2% – 3%</strong>；</li>
+    <li><strong>超超临界</strong> 机组温度高于超临界 ⇒ 效率再提高约 <strong>4%</strong>。</li>
+</ul>
+
+<h3>🔸 其他提高热机效率的方法</h3>
+<ul>
+    <li>减少炉内热量损失；</li>
+    <li>炉子密封，防止漏气；</li>
+    <li>减小机械摩擦。</li>
+</ul>
+
+<!-- 补充：原笔记中出现的额外注释（忽略电池电量等无关内容） -->
+<div class="separator-light"></div>
+<p style="font-size:0.95em; color:#3d3d3d;"><i>※ 整理时修正了部分公式写法（如等温积分、热容表达式），保留了核心概念。原始图片 IMG_6066、6067、6070、6068 内容均已涵盖。</i></p>
+
+<!-- 打印留白 -->
+<div style="height:20px;"></div>
+<div class="footer-meta">
+    整理自热力学笔记 · 适用打印 / Word 导出
+</div>
+
+</body>
+</html>

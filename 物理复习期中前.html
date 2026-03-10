@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热学+简谐振动核心考点总结（可下载Word）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "Times New Roman", serif;
+        }
+        body {
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            padding: 35px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #28a745;
+            font-size: 2em;
+        }
+        h2 {
+            color: #28a745;
+            margin: 30px 0 15px;
+            font-size: 1.6em;
+            border-left: 6px solid #28a745;
+            padding-left: 15px;
+            background-color: #f0fff0;
+            line-height: 1.3;
+        }
+        h3 {
+            color: #1e7e34;
+            margin: 20px 0 10px;
+            font-size: 1.3em;
+        }
+        .formula {
+            background: #f8f9fa;
+            padding: 12px 18px;
+            border-left: 5px solid #28a745;
+            margin: 15px 0;
+            font-family: "Times New Roman", "Courier New", monospace;
+            font-size: 1.2em;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .btn-download {
+            display: block;
+            width: 260px;
+            height: 55px;
+            margin: 40px auto 20px;
+            background: #28a745;
+            color: white;
+            text-align: center;
+            line-height: 55px;
+            font-size: 1.4em;
+            font-weight: bold;
+            border-radius: 40px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+            transition: background 0.2s;
+        }
+        .btn-download:hover {
+            background: #1e7e34;
+        }
+        p, li {
+            color: #2c3e50;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .note {
+            background: #e9f7ef;
+            border-left: 4px solid #28a745;
+            padding: 12px 18px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        hr {
+            border: 1px solid #ddd;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <h1>🔥 热学 + 简谐振动 核心考点总结</h1>
+
+        <!-- 理想气体部分 -->
+        <h2>一、理想气体（第七章 气体动理论）</h2>
+        
+        <h3>1. 理想气体状态方程</h3>
+        <p><strong>宏观式：</strong></p>
+        <div class="formula">pV = νRT = (m/M)RT</div>
+        <p><strong>微观式：</strong></p>
+        <div class="formula">p = nkT</div>
+        <p>说明：n = N/V 为分子数密度，k = R/Nₐ 为玻尔兹曼常量。</p>
+
+        <h3>2. 理想气体压强公式</h3>
+        <div class="formula">p = (2/3)nε̄ₖ = (1/3)nmv̄²</div>
+        <p><strong>微观意义：</strong>压强是大量分子频繁碰撞器壁的平均效果，与分子数密度 n 和分子平均平动动能 ε̄ₖ 成正比。</p>
+
+        <h3>3. 理想气体温度公式</h3>
+        <div class="formula">ε̄ₖ = (3/2)kT</div>
+        <p><strong>微观本质：</strong>温度是分子平均平动动能的量度，只与温度 T 有关。</p>
+
+        <h3>4. 自由度 & 能量均分定理</h3>
+        <ul>
+            <li>单原子分子（He、Ne）：自由度 i = 3（平动）</li>
+            <li>双原子分子（H₂、O₂，刚性）：i = 5（3平动+2转动）</li>
+            <li>多原子分子（H₂O、CO₂）：i = 6（3平动+3转动）</li>
+        </ul>
+        <p><strong>能量均分定理：</strong>平衡态下，分子每个自由度的平均能量均为 (1/2)kT。</p>
+        <p>一个分子的平均总能量：</p>
+        <div class="formula">ε̄ = (i/2)kT</div>
+
+        <h3>5. 理想气体内能</h3>
+        <p>内能 = 所有分子热运动动能的总和（只与温度、物质的量、自由度有关）</p>
+        <div class="formula">E = ν · (i/2)RT</div>
+        <p>内能增量：</p>
+        <div class="formula">ΔE = ν · (i/2)R ΔT</div>
+
+        <hr>
+
+        <!-- 热力学第一定律部分 -->
+        <h2>二、热力学第一定律与典型过程（第八章 热力学基础）</h2>
+        
+        <h3>1. 热力学第一定律</h3>
+        <p><strong>文字描述：</strong>系统吸收的热量 = 内能增量 + 系统对外做功</p>
+        <div class="formula">Q = ΔE + W</div>
+        <p><strong>符号规定：</strong></p>
+        <ul>
+            <li>Q > 0 吸热；Q < 0 放热</li>
+            <li>W > 0 系统对外做功；W < 0 外界对系统做功</li>
+            <li>ΔE > 0 温度升高；ΔE < 0 温度降低</li>
+        </ul>
+        <p><strong>第一类永动机：</strong>不消耗能量而不断对外做功的机器 → 违反热力学第一定律，不可能制成。</p>
+
+        <h3>2. 四个典型过程公式汇总</h3>
+        <ul>
+            <li><strong>等体过程（V = 常数）</strong>：
+                <br>做功 W = 0
+                <br>热量 Q_V = ν C_V ΔT
+                <br>内能 ΔE = ν C_V ΔT
+                <br>关系：Q_V = ΔE
+            </li>
+            <li><strong>等压过程（p = 常数）</strong>：
+                <br>做功 W = pΔV = νR ΔT
+                <br>热量 Q_p = ν C_p ΔT
+                <br>内能 ΔE = ν C_V ΔT
+            </li>
+            <li><strong>等温过程（T = 常数）</strong>：
+                <br>内能 ΔE = 0
+                <br>热量 Q = W = νRT ln(V₂/V₁) = νRT ln(p₁/p₂)
+            </li>
+            <li><strong>绝热过程（Q = 0）</strong>：
+                <br>热量 Q = 0
+                <br>做功 W = -ΔE
+                <br>内能 ΔE = ν C_V ΔT
+            </li>
+        </ul>
+        <p>其中 C_p = C_V + R，γ = C_p / C_V。</p>
+
+        <h3>3. 循环过程 & 热机效率</h3>
+        <p>循环一周：ΔE<sub>循环</sub> = 0，净吸热 = 净做功：Q<sub>净</sub> = W<sub>净</sub></p>
+        <p><strong>热机效率：</strong></p>
+        <div class="formula">η = W<sub>净</sub> / Q<sub>吸</sub> = 1 - |Q<sub>放</sub>| / Q<sub>吸</sub></div>
+
+        <h3>4. 卡诺循环</h3>
+        <p><strong>卡诺热机效率</strong>（T₁ 高温热源，T₂ 低温热源，热力学温标）：</p>
+        <div class="formula">η<sub>C</sub> = 1 - T₂ / T₁</div>
+        <p><strong>卡诺制冷系数：</strong></p>
+        <div class="formula">ε<sub>C</sub> = T₂ / (T₁ - T₂)</div>
+
+        <h3>5. 热力学第二定律</h3>
+        <ul>
+            <li><strong>开尔文表述：</strong>不可能从单一热源吸热使之完全变成功而不产生其他影响。</li>
+            <li><strong>克劳修斯表述：</strong>热量不能自动从低温物体传到高温物体。</li>
+        </ul>
+        <p><strong>本质：</strong>一切与热现象有关的宏观过程都是不可逆的。</p>
+
+        <hr>
+
+        <!-- 简谐振动部分 -->
+        <h2>三、简谐振动（第九章 机械振动）</h2>
+        
+        <h3>1. 弹簧振子测质量</h3>
+        <p>角频率 ω = √(k/m)，周期 T = 2π √(m/k)</p>
+        <p>已知劲度系数 k，测周期 T 可得质量：</p>
+        <div class="formula">m = kT² / (4π²)</div>
+
+        <h3>2. 旋转矢量法</h3>
+        <ul>
+            <li>矢量长度 = 振幅 A</li>
+            <li>旋转角速度 = ω</li>
+            <li>t = 0 时与 x 轴夹角 = 初相位 φ</li>
+            <li>矢量在 x 轴上的投影：x = A cos(ωt + φ)</li>
+        </ul>
+        <p>作用：直观判断任意时刻的位移、速度方向、相位关系。</p>
+
+        <h3>3. 简谐振动的能量特征</h3>
+        <p>总机械能守恒：</p>
+        <div class="formula">E = (1/2) k A² = (1/2) m ω² A²</div>
+        <ul>
+            <li>最大位移处（x = ±A）：动能 Eₖ = 0，势能最大</li>
+            <li>平衡位置（x = 0）：势能 Eₚ = 0，动能最大</li>
+        </ul>
+
+        <h3>4. 同方向同频率简谐振动的合成</h3>
+        <p>分振动：x₁ = A₁ cos(ωt + φ₁)，x₂ = A₂ cos(ωt + φ₂)</p>
+        <p>合振动：x = A cos(ωt + φ)</p>
+        <p><strong>合振幅：</strong></p>
+        <div class="formula">A = √[A₁² + A₂² + 2A₁A₂ cos(φ₂ - φ₁)]</div>
+        <ul>
+            <li>相位相同（Δφ = 2kπ）：A = A₁ + A₂（加强）</li>
+            <li>相位相反（Δφ = (2k+1)π）：A = |A₁ - A₂|（减弱）</li>
+        </ul>
+
+        <hr>
+        <p style="text-align:right; color:gray;">—— 对应《大学物理（2）》第七、八、九章 ——</p>
+
+        <!-- 下载按钮 -->
+        <button class="btn-download" id="downloadBtn">📥 下载 Word 文档</button>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // 获取要保存的内容
+            const contentHTML = document.getElementById('content').innerHTML;
+
+            // 获取页面样式
+            const styles = document.querySelector('style').innerHTML;
+
+            // 构建完整的Word文档HTML（隐藏下载按钮）
+            const fullDoc = `
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>热学+简谐振动核心考点</title>
+                    <style>
+                        ${styles}
+                        .btn-download { display: none; }
+                        body { background: white; padding: 30px; }
+                        .container { max-width: 1000px; margin: 0 auto; box-shadow: none; }
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        ${contentHTML}
+                    </div>
+                </body>
+                </html>
+            `;
+
+            // 创建Blob并下载为 .doc 文件
+            const blob = new Blob([fullDoc], { type: 'application/msword' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = '热学+简谐振动核心考点.doc';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        });
+    </script>
+</body>
+</html>

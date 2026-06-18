@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>科软22408 · 备考总计划表（7月启动版）</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=2.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f5f7fb;
+      font-family: system-ui, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+      padding: 2rem 1.5rem;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* 头部卡片 */
+    .header {
+      background: linear-gradient(135deg, #0b1e33 0%, #1c3a5c 100%);
+      border-radius: 2.5rem;
+      padding: 2.2rem 2.5rem;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 18px 30px -12px rgba(0, 35, 70, 0.3);
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: rgba(255,255,255,0.1);
+      padding: 0.4rem 1.8rem;
+      border-radius: 4rem;
+      backdrop-filter: blur(10px);
+    }
+    .target-badge {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .target-item {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      padding: 0.8rem 1.8rem;
+      border-radius: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+    .target-item span {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #ffd966;
+      margin-left: 0.3rem;
+    }
+
+    /* 倒计时 */
+    .countdown {
+      background: white;
+      border-radius: 2rem;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      border: 1px solid #e9eef2;
+    }
+    .days-left {
+      font-size: 2.2rem;
+      font-weight: 700;
+      background: #fef2f2;
+      color: #b91c1c;
+      padding: 0.3rem 1.8rem;
+      border-radius: 3rem;
+      letter-spacing: 1px;
+    }
+    .motto {
+      font-style: italic;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    /* 表格通用 */
+    .section {
+      background: white;
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+      border: 1px solid #eef2f6;
+    }
+    .section h2 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      border-left: 6px solid #2563eb;
+      padding-left: 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th {
+      background: #f8fafc;
+      text-align: left;
+      padding: 1rem 0.8rem;
+      font-weight: 600;
+      color: #1e3a8a;
+      border-bottom: 2px solid #dce3eb;
+    }
+    td {
+      padding: 0.9rem 0.8rem;
+      border-bottom: 1px solid #edf2f7;
+      vertical-align: middle;
+    }
+    .subject-tag {
+      display: inline-block;
+      font-weight: 600;
+      padding: 0.2rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      background: #eef2ff;
+      color: #4338ca;
+    }
+    .math-tag { background: #e0f2fe; color: #0369a1; }
+    .eng-tag { background: #fef3c7; color: #92400e; }
+    .pol-tag { background: #f3e8ff; color: #6b21a8; }
+    .cs-tag { background: #dcfce7; color: #15803d; }
+
+    .progress-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .progress-bar {
+      width: 80px;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #2563eb;
+      border-radius: 12px;
+      width: 0%;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: #334155;
+    }
+    .checklist li::before {
+      content: "☐ ";
+      font-weight: bold;
+      margin-right: 4px;
+      color: #64748b;
+    }
+    .done li::before {
+      content: "☑ ";
+      color: #15803d;
+    }
+
+    hr {
+      border: 0.5px solid #e2e8f0;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .footer-note {
+      background: #f1f5f9;
+      border-radius: 2rem;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: #334155;
+    }
+    .btn-download {
+      background: #0f172a;
+      color: white;
+      border: none;
+      padding: 0.8rem 2.2rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-download:hover {
+      background: #1e293b;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 1rem; }
+      .header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container" id="planContainer">
+  <!-- 头部信息 -->
+  <div class="header">
+    <h1>🎯 科软·22408（7月启动）</h1>
+    <div class="target-badge">
+      <div class="target-item">🎓 目标 <span>380+</span></div>
+      <div class="target-item">📐 数二 <span>120</span></div>
+      <div class="target-item">💾 408 <span>115</span></div>
+      <div class="target-item">🇬🇧 英二 <span>75</span></div>
+      <div class="target-item">📖 政治 <span>65</span></div>
+    </div>
+  </div>
+
+  <!-- 倒计时 + 考研初试预估日期 -->
+  <div class="countdown" id="countdownBox">
+    <div>📅 预估初试：<strong>2026年12月19日-20日</strong></div>
+    <div class="days-left" id="daysDisplay">计算中...</div>
+    <div class="motto">“7月启动不晚，高效执行是关键！”</div>
+  </div>
+
+  <!-- 总计划表：按月+科目拆解（7月启动版） -->
+  <div class="section">
+    <h2>📋 六个月·总分计划总表（7月启动）</h2>
+    <table id="mainPlanTable">
+      <thead> <tr><th>月份</th><th>数学二 (120+)</th><th>408专业课 (115+)</th><th>英语二 (75+)</th><th>政治 (65+)</th><th>关键产出/进度</th></tr> </thead>
+      <tbody>
+        <tr><td><strong>7月</strong><br>现在-7.31</td>
+          <td><span class="subject-tag math-tag">高数基础+强化</span> 武忠祥基础课速刷(2周)+强化前半<br>+《1800》基础篇重点题</td>
+          <td><span class="subject-tag cs-tag">数据结构+计组</span> 王道DS全册+计组1-4章<br>（每天至少2h刷题）</td>
+          <td><span class="subject-tag eng-tag">单词+阅读</span> 墨墨每日150新+300旧<br>2010-2015真题阅读(2篇/天精翻)</td>
+          <td><span class="subject-tag pol-tag">暂不启动</span></td>
+          <td>☐ 高数基础+强化过半<br>☐ DS选择题正确率>70%<br>☐ 完成10篇阅读精翻</td>
+        </tr>
+        <tr><td><strong>8月</strong></td>
+          <td><span class="subject-tag math-tag">高数强化+线代全阶段</span> 武忠祥强化后半+李永乐线代基础+强化<br>+《1800》强化篇选题</td>
+          <td><span class="subject-tag cs-tag">计组+操作系统+网络</span> 计组收尾+OS 1-5章+网络1-4章</td>
+          <td><span class="subject-tag eng-tag">单词+阅读+翻译</span> 2016-2020真题阅读+翻译专项练习</td>
+          <td><span class="subject-tag pol-tag">启动·选择</span> 徐涛马原+毛中特视频+1000题刷选择</td>
+          <td>☐ 线代强化完成<br>☐ 408一轮全部结束(8月底)<br>☐ 政治1000题完成50%</td>
+        </tr>
+        <tr><td><strong>9月</strong></td>
+          <td><span class="subject-tag math-tag">真题开启+错题</span> 2008-2015年真题(1.5天/套)<br>整理错题本+题型归类</td>
+          <td><span class="subject-tag cs-tag">408二轮+大题专攻</span> 算法题+PV操作+计组计算+网络协议</td>
+          <td><span class="subject-tag eng-tag">阅读+作文</span> 2021-2024真题阅读+整理大小作文模板</td>
+          <td><span class="subject-tag pol-tag">1000题二刷+史纲</span> 1000题错题二刷+史纲视频+选择</td>
+          <td>☐ 数学真题均分>100<br>☐ 408二轮大题思路成型<br>☐ 政治1000题刷完</td>
+        </tr>
+        <tr><td><strong>10月</strong></td>
+          <td><span class="subject-tag math-tag">真题+模拟+错题</span> 2016-2026真题+李林6套卷(选做)<br>针对性补薄弱题型</td>
+          <td><span class="subject-tag cs-tag">408真题+查漏</span> 2009-2020年真题+错题反复刷</td>
+          <td><span class="subject-tag eng-tag">作文+完形新题型</span> 背诵模板+手写15篇+完形/新题型专项</td>
+          <td><span class="subject-tag pol-tag">知识点背诵+小程序刷题</span> 核心考点背诵+选择题保温</td>
+          <td>☐ 数学近5年真题>115<br>☐ 408真题均分>100<br>☐ 英语作文模板熟练</td>
+        </tr>
+        <tr><td><strong>11月</strong></td>
+          <td><span class="subject-tag math-tag">冲刺模拟+技巧</span> 李林6/4套卷+武忠祥选填技巧<br>错题本最终复盘</td>
+          <td><span class="subject-tag cs-tag">408真题+全真模拟</span> 2021-2026真题+模拟卷训练</td>
+          <td><span class="subject-tag eng-tag">全真模拟+查漏</span> 2025-2026真题模拟+单词收尾</td>
+          <td><span class="subject-tag pol-tag">肖八+知识点背诵</span> 肖八选择题精刷+大题思路整理</td>
+          <td>☐ 肖八选择均分35+<br>☐ 408真题均分>110<br>☐ 数学模拟卷均分>115</td>
+        </tr>
+        <tr><td><strong>12月</strong></td>
+          <td><span class="subject-tag math-tag">保温+回顾</span> 错题本+李林4套卷+公式背诵</td>
+          <td><span class="subject-tag cs-tag">背诵+手写代码</span> 核心考点背诵+代码手写+真题复盘</td>
+          <td><span class="subject-tag eng-tag">作文+全真模拟</span> 模板最终背诵+1-2套全真模拟</td>
+          <td><span class="subject-tag pol-tag">肖四背诵+选择题保温</span> 肖四大题全背+选择查漏</td>
+          <td>☐ 全科模拟考试至少3次<br>☐ 肖四大题背熟<br>☐ 数学/408公式/考点烂熟</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 详细每周任务模板 + 当前进度建议（7月首周） -->
+  <div class="section">
+    <h2>📌 本周启动清单 (7月1日-7月7日)</h2>
+    <table>
+      <thead><tr><th>星期</th><th>数学二 (武忠祥+1800)</th><th>408专业课 (王道DS+计组)</th><th>英语二</th><th>政治</th></tr></thead>
+      <tbody>
+        <tr><td>周一</td><td>武忠祥高数基础·极限（速刷）+1800基础篇极限题</td><td>王道DS第一章绪论+第二章线性表（顺序表）</td><td>墨墨150新词+复习+2010年Text1精读</td><td>—</td></tr>
+        <tr><td>周二</td><td>武忠祥高数基础·导数+1800基础篇导数题</td><td>DS第二章线性表（链表）+选择题</td><td>墨墨复习+2010年Text2精读+长难句2句</td><td>—</td></tr>
+        <tr><td>周三</td><td>武忠祥高数强化·极限计算+1800强化篇极限题</td><td>DS第三章栈和队列+选择题</td><td>墨墨复习+2011年Text1精读</td><td>—</td></tr>
+        <tr><td>周四</td><td>武忠祥高数强化·导数应用+1800强化篇导数题</td><td>DS第四章串+计组第一章计算机系统概述</td><td>墨墨复习+2011年Text2精读+翻译练习</td><td>—</td></tr>
+        <tr><td>周五</td><td>武忠祥高数强化·中值定理+例题</td><td>DS第五章树与二叉树（概念+遍历）+计组第二章数据的表示</td><td>墨墨复习+2012年Text1精读</td><td>—</td></tr>
+        <tr><td>周六</td><td>整理本周数学错题+重做薄弱题+线代基础入门</td><td>DS第五章二叉树代码手写+计组第二章习题</td><td>墨墨大复习+本周阅读生词整理+翻译1段</td><td>—</td></tr>
+        <tr><td>周日</td><td>复盘本周高数内容+线代基础·行列式</td><td>复盘本周DS内容+计组第三章存储系统（入门）</td><td>滚动复习本周所有单词+作文模板入门</td><td>徐涛马原视频1-2节（预热）</td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:1rem; background:#fef9c3; padding:1rem; border-radius:1.2rem; font-weight:500;">
+      ⚡ 7月启动纪律：每天学习时长不低于8h，数学/408占6h，英语占2h；手机锁箱，每日任务必须完成，周日强制复盘本周漏洞！
+    </div>
+  </div>
+
+  <!-- 资源核对 + 视频/书籍清单（7月启动版） -->
+  <div class="section">
+    <h2>📚 资源核对清单（7月启动必齐）</h2>
+    <table>
+      <thead><tr><th>科目</th><th>必备资料</th><th>辅助/视频</th><th>获取状态</th></tr></thead>
+      <tbody>
+        <tr><td>数学二</td><td>武忠祥高数辅导讲义(基础+强化)、李永乐线代红皮书、汤家凤1800题、历年真题卷</td><td>B站武忠祥基础/强化（倍速看）、李永乐线代强化</td><td class="progress-cell">☐ 7月5日前购齐</td></tr>
+        <tr><td>408</td><td>王道4本单科书(DS/计组/OS/网络)、408历年真题卷</td><td>陈越DS、李治军OS、纪禄平计组（倍速刷重点）</td><td class="progress-cell">☐ 7月5日前购齐</td></tr>
+        <tr><td>英语</td><td>黄皮书英语二（2010-2026）、墨墨APP会员</td><td>田静语法（速刷）、唐迟阅读技巧</td><td class="progress-cell">☐ 7月3日前购齐</td></tr>
+        <tr><td>政治</td><td>肖秀荣精讲精练/1000题、徐涛核心考案</td><td>徐涛强化课（马原/毛中特重点看）、苍盾小程序</td><td class="progress-cell">☐ 7月10日前购齐</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer-note">
+    <div>✅ 科软22408 备考仪表盘（7月启动版）· 今日开始执行</div>
+    <button class="btn-download" id="downloadWordBtn">⬇️ 下载 Word 计划表</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // 倒计时：预估2026年12月19日
+    const examDate = new Date(2026, 11, 19); // 月份11=12月
+    const today = new Date();
+    const diffTime = examDate - today;
+    const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const daysDisplay = document.getElementById('daysDisplay');
+    if (daysDisplay) {
+      daysDisplay.textContent = daysLeft > 0 ? `⏳ 倒计时 ${daysLeft} 天` : '考试已过';
+    }
+
+    // 简单的Word下载功能
+    document.getElementById('downloadWordBtn').addEventListener('click', function() {
+      const container = document.getElementById('planContainer');
+      const styles = document.querySelector('style').innerHTML;
+      const htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head><meta charset="UTF-8"><title>科软22408备考计划表（7月启动版）</title><style>${styles} body { background: white; padding: 20px; } .btn-download { display: none; }</style></head>
+        <body>${container.outerHTML}</body>
+        </html>
+      `;
+      const blob = new Blob([htmlContent], { type: 'application/msword' }); // 使用application/msword 生成.doc
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = '科软22408_备考总计划表_7月启动版.doc';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    // 高亮7月行
+    const currentMonth = today.getMonth() + 1; // 1-12
+    if (currentMonth === 7) {
+      const firstRow = document.querySelector('#mainPlanTable tbody tr');
+      if (firstRow) {
+        firstRow.style.background = '#f0f9ff';
+      }
+    }
+  })();
+</script>
+</body>
+</html>
